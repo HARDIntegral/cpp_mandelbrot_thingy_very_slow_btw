@@ -17,12 +17,19 @@ namespace CppBind
             IntPtr raw_buff = CalcMandelbrot(width, height, granularity);
 
             // convert C++ array
-            int[] buff = new int[width * height];
-            Marshal.Copy(raw_buff, buff, 0, width * height);
-            DeleteMandelbrot(raw_buff);
+            try
+            {
+                int[] buff = new int[width * height];
+                Marshal.Copy(raw_buff, buff, 0, width * height);
+                DeleteMandelbrot(raw_buff);
 
-            foreach (int i in buff)
-                Console.WriteLine(i);
+                foreach (int i in buff)
+                    Console.WriteLine(i);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
         }
     }
 }

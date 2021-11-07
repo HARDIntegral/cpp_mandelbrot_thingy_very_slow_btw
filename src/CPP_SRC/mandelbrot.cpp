@@ -15,7 +15,7 @@ int Mandelbrot(std::complex<double> c, int granularity) {
 }
 
 int* CalcMandelbrot(int width, int height, int granularity) {
-    int bitmap[width*height];
+    int* bitmap = (int*)malloc(width*height*sizeof(int));
 
     std::complex<double> comp;
     int res, color;
