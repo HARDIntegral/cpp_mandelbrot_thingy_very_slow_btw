@@ -10,7 +10,8 @@ extern "C" {
 #else
 #  define MODULE_API
 #endif
-MODULE_API int* Mandelbrot(int granularity);
+MODULE_API int* CalcMandelbrot(int width, int height, int granularity);
+MODULE_API void DeleteMandelbrot(int* array);
 #ifdef __cplusplus
 }
 #endif

@@ -6,18 +6,20 @@ namespace CppBind
     public class Mandelbrot_Wrapper
     {
         [DllImport(@"./CPP_SRC/libmandelbrot.so")]
-        public static extern IntPtr Mandelbrot(int granularity);
+        public static extern IntPtr CalcMandelbrot(int width, int height, int granularity);
+        [DllImport(@"./CPP_SRC/libmandelbrot.so")]
+        public static extern void DeleteMandelbrot(IntPtr array);
 
         public static void Wrapper(int granularity)
         {
             // create a bitmap of the mandelbrot set
-            IntPtr raw_buff = Mandelbrot(granularity);
+            int width = 10, height = 40;
+            IntPtr raw_buff = CalcMandelbrot(width, height, granularity);
 
             // convert C++ array
-            int buff_len = Marshal.ReadInt32(raw_buff);
-            IntPtr buff_start = IntPtr.Add(raw_buff, 4);
-            int[] buff = new int[buff_len];
-            Marshal.Copy(buff_start, buff, 0, buff_len);
+            int[] buff = new int[width * height];
+            Marshal.Copy(raw_buff, buff, 0, width * height);
+            DeleteMandelbrot(raw_buff);
 
             foreach (int i in buff)
                 Console.WriteLine(i);
