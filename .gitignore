@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+# DOTNET 
+src/obj
+src/bin
+src.csproj
+
+# CMake
+*.cmake
+src/CPP_SRC/CMakeFiles  
+CMakeCache.txt
