@@ -37,6 +37,7 @@ src/bin
 src.csproj
 
 # CMake
+src/CPP_SRC/Makefile
 *.cmake
 src/CPP_SRC/CMakeFiles  
 CMakeCache.txt
