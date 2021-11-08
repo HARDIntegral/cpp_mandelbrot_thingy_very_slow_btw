@@ -1,34 +1,25 @@
-#include <iostream>
-#include <cstdlib>
+#include <fstream>
 #include <complex>
-#include <malloc.h>
 #include "mandelbrot.h"
 
 int Mandelbrot(std::complex<double> c, int granularity) {
     int val = 0;
-    std::complex<double> z = 0;
-    while (abs(z)>0 && val < granularity) {
-        z = (z*z) + c;
-        val++;
-    }
+    for (std::complex<double> z = 0; abs(z)<=2 && val < granularity; val++)
+        z = std::pow(z, 2) + c;
     return val;
 }
 
 void CalcMandelbrot(int width, int height, int granularity) {
-    int* bitmap = (int*)malloc(width*height*sizeof(int));
+    std::ofstream bitmap ("mandelbrot.txt", std::ios::trunc);
+    if(!bitmap.is_open()) 
+        return;
 
     std::complex<double> comp;
-    int res, color;
-    for (int x = 0; x < width; x++) {
-        for (int y = 0; y < height; y++) {
+    for (double x = 0; x < width; x++) {
+        for (double y = 0; y < height; y++) {
             comp =  (-2 + (x / width) * 3, -1 + (y / height) * 2);
-            res = Mandelbrot(comp, granularity);
-            color = 255 - (res * 255) % granularity;
-            bitmap[x*y] = color;
+            bitmap << 255 - (Mandelbrot(comp, granularity) * 255) % granularity << std::endl;
         }
     }
-}
-
-void DeleteMandelbrot(int* array) {
-    delete[] array;
+    bitmap.close();
 }

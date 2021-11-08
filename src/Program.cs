@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.IO;
+using System.Text;
+using System.Drawing;
 
 namespace src
 {
@@ -10,7 +13,14 @@ namespace src
 
         static void Main(string[] args)
         {
-            CalcMandelbrot(600, 400, 50);
+            int width = 60, height = 40;
+            CalcMandelbrot(width, height, 50);
+            string[] raw_buff = File.ReadAllLines("./mandelbrot.txt", Encoding.UTF8);
+            byte[] buff = new byte[width * height];
+            for (int i = 0; i < width * height; i++)
+                buff[i] = byte.Parse(raw_buff[i]);
+
+            Image.FromStream(new MemoryStream(buff));
         }
     }
 }
