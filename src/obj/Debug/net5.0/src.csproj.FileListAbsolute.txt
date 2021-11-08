@@ -1,0 +1,16 @@
+/mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.csproj.AssemblyReference.cache
+/mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.AssemblyInfoInputs.cache
+/mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.AssemblyInfo.cs
+/mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.csproj.CoreCompileInputs.cache
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/src
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/src.deps.json
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/src.runtimeconfig.json
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/src.runtimeconfig.dev.json
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/src.dll
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/ref/src.dll
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/src.pdb
+/mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.dll
+/mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/ref/src.dll
+/mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.pdb
+/mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.genruntimeconfig.cache

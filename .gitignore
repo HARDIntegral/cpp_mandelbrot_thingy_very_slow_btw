@@ -31,13 +31,11 @@
 *.out
 *.app
 
-# DOTNET 
-src/obj
-src/bin
-src.csproj
+# VSCode
+.vscode
 
 # CMake
-src/CPP_SRC/Makefile
-*.cmake
-src/CPP_SRC/CMakeFiles  
 CMakeCache.txt
+CMakeFiles/
+*.cmake
+Makefile
