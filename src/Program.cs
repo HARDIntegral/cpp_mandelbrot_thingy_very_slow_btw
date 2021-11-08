@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
-namespace CppBind
+namespace src
 {
     class Program
     {
+        [DllImport(@"./CPP_SRC/libmandelbrot.so")]
+        public static extern void CalcMandelbrot(int width, int height, int granularity);
+
         static void Main(string[] args)
         {
-            Mandelbrot_Wrapper.Wrapper(60);
+            CalcMandelbrot(600, 400, 50);
         }
     }
 }

@@ -14,7 +14,7 @@ int Mandelbrot(std::complex<double> c, int granularity) {
     return val;
 }
 
-int* CalcMandelbrot(int width, int height, int granularity) {
+void CalcMandelbrot(int width, int height, int granularity) {
     int* bitmap = (int*)malloc(width*height*sizeof(int));
 
     std::complex<double> comp;
@@ -27,8 +27,6 @@ int* CalcMandelbrot(int width, int height, int granularity) {
             bitmap[x*y] = color;
         }
     }
-
-    return bitmap;
 }
 
 void DeleteMandelbrot(int* array) {
