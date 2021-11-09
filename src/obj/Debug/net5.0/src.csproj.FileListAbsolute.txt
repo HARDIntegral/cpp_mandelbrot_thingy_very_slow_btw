@@ -14,3 +14,8 @@
 /mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/ref/src.dll
 /mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.pdb
 /mnt/c/Dev/GitHub/Mandelbrot/src/obj/Debug/net5.0/src.genruntimeconfig.cache
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/Microsoft.Win32.SystemEvents.dll
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/System.Drawing.Common.dll
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/mnt/c/Dev/GitHub/Mandelbrot/src/bin/Debug/net5.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll

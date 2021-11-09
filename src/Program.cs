@@ -13,14 +13,23 @@ namespace src
 
         static void Main(string[] args)
         {
-            int width = 60, height = 40;
+            int width = 600, height = 400;
+            Bitmap image = new Bitmap(width, height);
+
+            // calculate the Mandelbrot set
             CalcMandelbrot(width, height, 50);
             string[] raw_buff = File.ReadAllLines("./mandelbrot.txt", Encoding.UTF8);
-            byte[] buff = new byte[width * height];
-            for (int i = 0; i < width * height; i++)
-                buff[i] = byte.Parse(raw_buff[i]);
 
-            Image.FromStream(new MemoryStream(buff));
+            // convert the raw bitmap to a BMP image
+            for (int x = 0; x < width; x++)
+            {
+                for (int y = 0; y < height; y++)
+                {
+                    int color = Int32.Parse(raw_buff[height * x + y]);
+                    image.SetPixel(x, y, Color.FromArgb(color, color, color));
+                }
+            }
+            image.Save("mandelbrot.bmp");
         }
     }
 }

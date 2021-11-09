@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "YJ5+JMgBf5ZWIKy+/4IVxapewtLKOz8Bi/QZDIE4N/rzcp+edmni953n0ii9oiEla/TyM1hHUShY5zTADCHrPg==",
+  "dgSpecHash": "RZ+HxMuBBe8qzJtHLhevg7a9BMbsQ5KFiUbn6iEm+po9UW4eJ9+o69QFinhFG7qqIfNmGko477Ujk6dcODNYWQ==",
   "success": true,
   "projectFilePath": "/mnt/c/Dev/GitHub/Mandelbrot/src/src.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/integral/.nuget/packages/microsoft.netcore.platforms/5.0.0/microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "/home/integral/.nuget/packages/microsoft.win32.systemevents/5.0.0/microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "/home/integral/.nuget/packages/system.drawing.common/5.0.3/system.drawing.common.5.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

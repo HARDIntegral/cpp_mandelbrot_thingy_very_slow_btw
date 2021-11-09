@@ -4,7 +4,7 @@
 
 int Mandelbrot(std::complex<double> c, int granularity) {
     int val = 0;
-    for (std::complex<double> z = 0; abs(z)<=2 && val < granularity; val++)
+    for (std::complex<double> z = 0; abs(z)<2 && val < granularity; val++)
         z = std::pow(z, 2) + c;
     return val;
 }

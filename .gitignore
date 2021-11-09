@@ -31,14 +31,18 @@
 *.out
 *.app
 
-# VSCode
-.vscode
+# DOTNET 
+src/obj
+src/bin
+src.csproj
 
 # CMake
-CMakeCache.txt
-CMakeFiles/
+src/CPP_SRC/Makefile
 *.cmake
-Makefile
+src/CPP_SRC/CMakeFiles  
+CMakeCache.txt
 
-# Extra files
+# other stuff
 mandelbrot.txt
+mandelbrot.bmp
+.vscode/
