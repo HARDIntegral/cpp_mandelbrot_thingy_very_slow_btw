@@ -1,5 +1,6 @@
 #include <fstream>
 #include <complex>
+#include "progress_bar.h"
 #include "mandelbrot.h"
 
 int Mandelbrot(std::complex<double> c, int granularity) {

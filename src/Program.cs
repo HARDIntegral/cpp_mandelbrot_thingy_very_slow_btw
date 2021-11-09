@@ -14,7 +14,7 @@ namespace src
 
         static void Main(string[] args)
         {
-            int width = 6000, height = 4000;
+            int width = 300, height = 200;
             Bitmap image = new Bitmap(width, height);
 
             // calculate the Mandelbrot set
