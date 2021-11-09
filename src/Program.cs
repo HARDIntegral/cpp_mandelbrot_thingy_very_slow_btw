@@ -14,11 +14,13 @@ namespace src
 
         static void Main(string[] args)
         {
-            int width = 300, height = 200;
+            int width = Int32.Parse(args[0]);
+            int height = height = Int32.Parse(args[1]);
+            int granularity = Int32.Parse(args[2]);
             Bitmap image = new Bitmap(width, height);
 
             // calculate the Mandelbrot set
-            CalcMandelbrot(width, height, 50);
+            CalcMandelbrot(width, height, granularity);
             string[] raw_buff = File.ReadAllLines("./mandelbrot.txt", Encoding.UTF8);
 
             // convert the raw bitmap to a BMP image

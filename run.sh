@@ -1,1 +1,1 @@
-cd src && dotnet run
+cd src && dotnet run $1 $2 $3
