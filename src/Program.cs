@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using System.IO;
 using System.Text;
 using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace src
 {
@@ -13,7 +14,7 @@ namespace src
 
         static void Main(string[] args)
         {
-            int width = 600, height = 400;
+            int width = 6000, height = 4000;
             Bitmap image = new Bitmap(width, height);
 
             // calculate the Mandelbrot set
@@ -29,7 +30,7 @@ namespace src
                     image.SetPixel(x, y, Color.FromArgb(color, color, color));
                 }
             }
-            image.Save("mandelbrot.bmp");
+            image.Save("mandelbrot.png", ImageFormat.Png);
         }
     }
 }

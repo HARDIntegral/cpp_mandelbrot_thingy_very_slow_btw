@@ -17,8 +17,8 @@ void CalcMandelbrot(int width, int height, int granularity) {
     std::complex<double> comp;
     for (double x = 0; x < width; x++) {
         for (double y = 0; y < height; y++) {
-            comp =  (-2 + (x / width) * 3, -1 + (y / height) * 2);
-            bitmap << 255 - (Mandelbrot(comp, granularity) * 255) % granularity << std::endl;
+            comp = std::complex<double>(-2 + (x / width) * 3, -1 + (y / height) * 2);
+            bitmap << 255 - (Mandelbrot(comp, granularity) * 5) % 255  << std::endl;
         }
     }
     bitmap.close();
