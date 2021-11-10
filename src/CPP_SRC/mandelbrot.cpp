@@ -9,10 +9,7 @@
 
 void print(int current_iter, int iter) {
     int lpad = ((double)current_iter/iter)*PBWIDTH; 
-    if (current_iter == iter)
-        printf("\rProgress: [%.*s%*s] Iterations:%d/%d", lpad, PBSTR, PBWIDTH-lpad, "", current_iter, iter);
-    else
-        printf("\rProgress: [%.*s%s%*s] Iterations:%d/%d", lpad, PBSTR, ">", PBWIDTH-lpad-1, "", current_iter, iter);
+    printf("\rProgress: [%.*s%*s] Iterations:%d/%d", lpad, PBSTR, PBWIDTH-lpad, "", current_iter, iter);
     fflush(stdout);
 }
 
@@ -31,8 +28,8 @@ void CalcMandelbrot(int width, int height, int granularity) {
 
     std::complex<double> comp;
     for (double x = 0; x < width; x++) {
+        print(x + 1, width);
         for (double y = 0; y < height; y++) {
-            print(x*height+y + 1, width*height);
             comp = std::complex<double>(-2 + (x / width) * 3, -1 + (y / height) * 2);
             bitmap << 255 - (Mandelbrot(comp, granularity) * 5) % 255  << std::endl;
         }
